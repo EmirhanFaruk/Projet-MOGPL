@@ -1,5 +1,10 @@
 import time
 
+def current_time_hms():
+    """
+    Returns the current time as a formatted string HH:MM:SS.
+    """
+    return time.strftime("%H_%M_%S", time.localtime())
 
 def now():
     """
