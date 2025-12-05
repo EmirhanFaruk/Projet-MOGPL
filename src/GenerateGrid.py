@@ -1,9 +1,9 @@
 import numpy as np
-from random import randint, choice
+from random import randint
 
 def is_valid_wall_position(grid, x, y):
     rows, cols = grid.shape
-    if x >= cols - 1 or y >= rows - 1:
+    if x >= cols - 1 or x < 0 or y >= rows - 1 or y < 0:
         return False
     if np.any(grid[y:y+2, x:x+2] == 1):
         return False

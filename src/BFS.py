@@ -11,6 +11,13 @@ advance_directions = {
     3: (-1, 0)   # West
 }
 
+wall_collision_directions = [
+    (0, -1),  # North
+    (0, 0),   # Center
+    (0, 1),   # South
+    (-1, 0)   # West
+]
+
 
 def valid_position(x, y, grid):
     """
@@ -18,7 +25,8 @@ def valid_position(x, y, grid):
     """
     if grid:
         if 0 <= x < len(grid[0]) - 1 and 0 <= y < len(grid) - 1:
-            return np.all(grid[y:y+2, x:x+2] == 0)
+            in_a_wall = any(grid[y + dy][x + dx] == 0 for dx, dy in wall_collision_directions)
+            return not in_a_wall
     return False
 
 def advance(state, action, grid):
