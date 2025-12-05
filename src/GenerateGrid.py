@@ -9,6 +9,26 @@ def is_valid_wall_position(grid, x, y):
         return False
     return True
 
+
+wall_collision_directions = [
+    (0, -1),  # North
+    (0, 0),   # Center
+    (-1, -1),   # South
+    (-1, 0)   # West
+]
+
+
+def valid_position(x, y, grid):
+    """
+    Check if the coordinates are valid(not in a wall and inside the grid).
+    """
+    if grid is not None:
+        if 0 <= x < len(grid[0]) - 1 and 0 <= y < len(grid) - 1:
+            in_a_wall = any(grid[y + dy][x + dx] == 1 for dx, dy in wall_collision_directions)
+            return not in_a_wall
+    return False
+
+
 def get_start_goal_positions(size, grid, min_distance=0):
     """
     Selects random start and goal positions on the grid ensuring they are not walls and meet the minimum distance requirement.
@@ -18,14 +38,14 @@ def get_start_goal_positions(size, grid, min_distance=0):
     
     start_x = randint(0, size - 1)
     start_y = randint(0, size - 1)
-    while grid[start_y][start_x] == 1:
+    while (not valid_position(start_x, start_y, grid)):
         start_x = randint(0, size - 1)
         start_y = randint(0, size - 1)
     start_o = randint(0, 3)
 
     goal_x = randint(0, size - 1)
     goal_y = randint(0, size - 1)
-    while abs(goal_y - start_y) < min_distance or grid[goal_y][goal_x] == 1:
+    while abs(goal_y - start_y) < min_distance or (not valid_position(goal_x, goal_y, grid)):
         goal_x = randint(0, size - 1)
         goal_y = randint(0, size - 1)
 
