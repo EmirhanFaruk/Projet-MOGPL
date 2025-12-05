@@ -1,3 +1,5 @@
+import numpy as np
+
 from State import State
 
 
@@ -15,8 +17,8 @@ def valid_position(x, y, grid):
     Check if the coordinates are valid(not in a wall and inside the grid).
     """
     if grid:
-        if x > 0 and x < len(grid[0]) and y > 0 and y < len(grid):
-            return grid[y][x] == 1 # placeholder for wall
+        if 0 <= x < len(grid[0]) - 1 and 0 <= y < len(grid) - 1:
+            return np.all(grid[y:y+2, x:x+2] == 0)
     return False
 
 def advance(state, action, grid):
@@ -53,11 +55,13 @@ def perform_action(current_state, action, grid):
         return advance(current_state, action, grid)
     return None
 
-def BFS(grid, start_x, start_y, start_o, goal_x, goal_y):
+def BFS(grid, start_pos, goal_pos):
     """
     Performs a breadth-first search on the grid to find a path from the start position and orientation to the goal position.
     Returns a list of actions to reach the goal, or None if no path is found.
     """
+    start_x, start_y, start_o = start_pos
+    goal_x, goal_y = goal_pos
     start_state = State(start_x, start_y, start_o)
     queue = [start_state]
     visited = set()
@@ -72,6 +76,7 @@ def BFS(grid, start_x, start_y, start_o, goal_x, goal_y):
             while current_state.parent is not None:
                 path.append(current_state.action)
                 current_state = current_state.parent
+            path.append(len(path))
             return path[::-1]  # Return reversed path
 
         # Generate possible actions (move forward(1, 2 or 3), turn left, turn right)
