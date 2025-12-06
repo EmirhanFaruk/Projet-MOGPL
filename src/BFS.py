@@ -84,7 +84,6 @@ def BFS(grid, start_pos, goal_pos):
             while current_state.parent is not None:
                 path.append(current_state.action)
                 current_state = current_state.parent
-            path.append(len(path))
             return path[::-1]  # Return reversed path
 
         # Generate possible actions (move forward(1, 2 or 3), turn left, turn right)
