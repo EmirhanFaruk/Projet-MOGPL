@@ -11,14 +11,22 @@ advance_directions = {
     3: (-1, 0)   # West
 }
 
+wall_collision_directions = [
+    (0, -1),  # North
+    (0, 0),   # Center
+    (-1, -1), # North-West
+    (-1, 0)   # West
+]
+
 
 def valid_position(x, y, grid):
     """
     Check if the coordinates are valid(not in a wall and inside the grid).
     """
-    if grid:
+    if grid is not None:
         if 0 <= x < len(grid[0]) - 1 and 0 <= y < len(grid) - 1:
-            return np.all(grid[y:y+2, x:x+2] == 0)
+            in_a_wall = any(grid[y + dy][x + dx] == 1 for dx, dy in wall_collision_directions)
+            return not in_a_wall
     return False
 
 def advance(state, action, grid):
@@ -71,7 +79,7 @@ def BFS(grid, start_pos, goal_pos):
         current_state = queue.pop(0)
 
         # Check if we reached the goal
-        if current_state.r == goal_x and current_state.c == goal_y:
+        if current_state.x == goal_x and current_state.y == goal_y:
             path = [] # Reconstruct path
             while current_state.parent is not None:
                 path.append(current_state.action)
@@ -83,8 +91,8 @@ def BFS(grid, start_pos, goal_pos):
         for action in ["a1", "a2", "a3", "D", "G"]:
             new_state = perform_action(current_state, action, grid)
             # If the new state is valid and not visited, add it to the queue
-            if new_state and (new_state.r, new_state.c, new_state.o) not in visited:
-                visited.add((new_state.r, new_state.c, new_state.o))
+            if new_state and (new_state.x, new_state.y, new_state.o) not in visited:
+                visited.add((new_state.x, new_state.y, new_state.o))
                 queue.append(new_state)
 
     return None  # No path found
