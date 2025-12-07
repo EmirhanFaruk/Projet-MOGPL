@@ -1,0 +1,100 @@
+7 D D a3 a3 a2 G a3
+11 G a2 G a3 a2 D a3 a3 a3 D a2
+8 G a3 G a3 a3 G a3 a3
+10 D a3 a3 a3 a3 a2 D a3 a3 a3
+19 D a1 G a3 G a3 a3 D a3 D a2 G a3 D a2 G a3 D a2
+10 D a2 D a3 G a3 a3 a2 G a2
+9 a3 a3 a1 D a3 a3 a1 D a1
+16 D D a3 a3 D a3 a3 a2 G a1 D a3 D a3 a3 a1
+7 a3 a2 G a3 a2 D a1
+7 D D a3 a3 a1 D a1
+8 G a3 a3 a3 a3 a1 G a1
+10 a3 a1 D a3 G a3 D a3 D a3
+11 D a3 D a2 G a3 a2 G a3 a3 a3
+10 D a2 G a3 a2 G a2 D a3 a2
+12 G a3 a3 a3 a2 G a3 a3 a3 a3 D a1
+14 D D a1 D a3 a3 a2 D a2 G a3 a1 D a1
+22 D a3 D a3 a3 a3 a1 G a1 D a2 G a3 a3 D a3 G a1 D a2 G a1
+7 D D a3 a3 a2 D a1
+8 G a1 G a3 a3 a3 G a2
+11 G a2 G a3 a3 a3 D a3 a1 D a1
+9 D a2 G a3 a3 D a2 G a3
+19 a3 a3 a3 a3 a3 a2 D a3 a3 a3 a2 D a2 G a2 D a3 G a1
+6 G a1 G a3 a3 a3
+21 D a3 a2 D a3 a2 G a2 D a1 G a3 D a3 G a3 a3 a1 D a3 a2
+24 a2 D a3 a2 D a3 G a3 G a3 a3 D a1 G a3 G a3 a1 D a3 G a3 G a3
+17 D a2 G a3 G a3 a1 D a2 G a3 a3 a3 a3 a1 D a1
+17 D D a3 a2 G a3 a3 a3 D a3 a3 a3 a1 D a3 a3 a1
+14 D D a3 a3 a2 D a3 a3 a3 a3 a3 a3 D a2
+10 a2 D a3 a3 a1 D a3 G a3 a2
+7 a3 a3 a3 a3 a3 G a1
+7 D a3 a3 a1 D a3 a2
+13 a2 D a3 a3 a2 D a3 a3 D a2 G a3 a1
+10 G a2 D a3 a3 D a2 G a3 a1
+15 D D a3 G a3 a3 a1 G a1 D a3 D a3 G a2
+21 a2 D a3 G a3 D a3 a3 a3 a2 D a3 G a2 D a3 a3 a3 a1 G a1
+12 D D a3 a2 G a3 a3 a2 D a3 G a3
+11 D D a1 G a3 G a3 a3 a3 D a1
+16 a1 G a3 a2 D a1 G a1 D a3 G a3 a3 a1 G a2
+12 a1 G a3 a3 a3 a3 a1 D a3 a1 G a3
+12 D D a3 a3 G a3 D a3 G a1 D a1
+10 a3 G a3 D a1 G a3 a2 D a1
+18 D a3 D a3 a2 G a3 G a1 D a3 a2 G a1 D a3 G a1
+11 G a3 a3 a2 D a3 a3 a3 a1 G a3
+7 D a1 D a3 a3 a3 a1
+19 D a3 a2 G a3 a1 D a3 a3 a2 G a3 a2 G a3 a3 a2 G a1
+13 a2 D a3 G a1 D a3 a3 a3 a3 D a3 a2
+3 G a3 a2
+15 D D a3 a3 a1 D a3 G a1 D a3 a3 a2 G a2
+14 G a3 D a3 a3 a1 G a3 a1 D a3 a3 G a3
+11 a1 D a3 a2 G a3 a3 a3 D a3 a3
+14 a2 G a2 D a2 G a1 D a2 G a3 a1 D a1
+10 D D a2 D a3 a3 a3 a1 D a2
+8 G a2 G a3 a3 a2 G a3
+9 D a3 D a3 a3 a3 a1 D a1
+8 a1 G a3 a3 D a3 a3 a1
+17 D D a3 a3 a3 a3 a1 D a3 a3 a3 a3 a3 D a3 D a1
+9 D a1 D a3 a1 G a2 D a3
+12 D a3 G a3 a1 D a2 G a3 a3 D a2
+7 D D a3 a3 a2 D a2
+21 a2 G a1 D a3 G a3 a3 G a3 D a3 a3 a3 a2 G a3 a3 a3 G a1
+13 D D a1 D a3 D a3 G a2 D a3 a3 a2
+30 D D a3 a2 G a3 a3 a1 G a3 D a3 G a3 a3 G a1 D a3 G a3 a3 D a1 G a3 a3 a1 G a3
+15 G a2 G a3 a1 G a3 D a3 D a3 G a3 G a3
+16 D a3 D a2 G a3 a3 a2 G a3 D a3 a3 G a3 a3
+31 a2 D a3 a2 G a3 a2 D a3 a3 a2 G a3 a2 D a1 G a3 G a1 D a3 G a3 a3 a3 G a3 a1 D a3
+10 a2 D a3 G a2 D a3 a2 G a2
+21 G a2 G a3 a2 D a1 G a3 a2 D a3 a2 G a2 D a3 a3 a1 D a1
+14 G a3 D a3 a1 G a1 D a3 a3 a3 D a3 a3
+16 D D a3 D a3 a3 D a3 G a3 a3 a3 a2 G a3 a1
+12 D a3 a1 G a3 D a3 a3 a3 a1 G a2
+10 D D a1 D a3 a3 a2 G a3 a2
+14 G a2 G a3 a3 a2 D a3 G a2 D a3 G a2
+19 D a2 D a3 G a1 D a3 a3 G a3 a1 D a3 a3 G a1 D a3
+7 G a1 D a3 a3 G a1
+13 a3 a3 a3 a2 G a3 a3 a2 D a3 a2 G a1
+10 G a3 a2 D a3 a3 a3 a2 G a2
+6 a3 a3 a3 a1 D a2
+17 D a2 G a1 D a3 G a3 a1 D a2 G a3 a3 a2 G a2
+9 a3 a3 a3 a2 G a3 D a3 a1
+7 a2 G a3 a3 D a3 a3
+11 a2 G a3 a3 a2 D a3 a1 G a3 a1
+13 D a3 a1 D a2 G a3 a3 G a3 a1 G a2
+15 D D a3 D a3 G a3 D a1 G a3 a2 D a3 a3
+7 a3 D a3 a3 a2 G a2
+17 a2 D a2 G a3 a2 D a2 G a3 a1 G a2 D a3 D a3
+9 D a3 a1 D a3 a3 a1 G a2
+10 D D a3 a2 D a3 a3 G a3 a1
+19 D a1 D a3 a3 D a1 G a3 a1 D a3 D a2 G a3 a1 D a1
+10 a1 G a3 a1 D a3 a3 a1 G a2
+11 D D a2 G a3 a2 G a3 a3 D a2
+12 a1 D a2 G a3 D a3 a2 D a2 G a2
+4 D D a3 a3
+5 G a1 G a3 a2
+12 D a3 a3 a3 a1 G a3 a3 a3 a2 D a1
+8 a3 a3 a1 G a3 a3 G a1
+17 D a2 G a3 a2 G a3 D a3 a1 G a3 a3 a1 G a3 a1
+14 D D a2 G a3 a2 D a3 a1 G a3 a1 G a1
+22 D a3 a3 a1 D a3 a1 G a3 a1 D a3 a3 a3 a3 D a3 a2 D a3 a3 a2
+11 D D a3 a3 a3 G a3 a3 a3 a3 a2
+8 D a3 D a3 a3 a1 G a3
