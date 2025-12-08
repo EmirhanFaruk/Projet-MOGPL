@@ -38,9 +38,9 @@ def advance(state, action, grid):
     advance_num = advance_action[action]
     di, dj = advance_directions[state[2]]
 
-    for i in range(1, advance_num + 1):
-        i = state[0] + (i * di)
-        j = state[1] + (i * dj)
+    for index in range(1, advance_num + 1):
+        i = state[0] + (index * di)
+        j = state[1] + (index * dj)
         if not valid_position(i, j, grid):
             return None
     
