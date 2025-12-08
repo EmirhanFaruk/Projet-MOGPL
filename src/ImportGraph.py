@@ -18,7 +18,7 @@ def read_input_file(filename):
         while True:
             # Read grid size
             line = f.readline().strip()
-            if line == "0 0" or line == "": # As a safety if forgot to put 0 0 at the end
+            if line == "0 0": # If there's 0 0, it's the end of the instances
                 break
             M_N = line.split()
             M = int(M_N[0])
@@ -34,10 +34,10 @@ def read_input_file(filename):
 
             # Read start/goal + orientation
             last_line = f.readline().strip().split()
-            D1 = int(last_line[1])
-            D2 = int(last_line[0])
-            F1 = int(last_line[3])
-            F2 = int(last_line[2])
+            D1 = int(last_line[0])
+            D2 = int(last_line[1])
+            F1 = int(last_line[2])
+            F2 = int(last_line[3])
             orientation = directions[last_line[4].lower()]  # e.g., "nord", "sud", "est", "ouest"
 
             start_pos = (D1, D2, orientation)
