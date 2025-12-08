@@ -2,30 +2,30 @@ import numpy as np
 
 advance_action = {"a1": 1, "a2": 2, "a3": 3}
 advance_directions = {
-    0: (0, -1),  # North
-    1: (1, 0),   # East
-    2: (0, 1),   # South
-    3: (-1, 0)   # West
+    0: (-1, 0),  # North
+    1: (0, 1),   # East
+    2: (1, 0),   # South
+    3: (0, -1)   # West
 }
 
 wall_collision_directions = [
-    (0, -1),  # North
+    (-1, 0),  # North
     (0, 0),   # Center
     (-1, -1), # North-West
-    (-1, 0)   # West
+    (0, -1)   # West
 ]
 
 
-def valid_position(x, y, grid):
+def valid_position(i, j, grid):
     """
     Check if the coordinates are valid(not in a wall and inside the grid).
     """
     if grid is not None:
-        for dx, dy in wall_collision_directions:
-            nx, ny = x + dx, y + dy
-            if not (0 <= nx < len(grid[0]) and 0 <= ny < len(grid)):
+        for di, dj in wall_collision_directions:
+            ni, nj = i + di, j + dj
+            if not (0 <= ni < len(grid) and 0 <= nj < len(grid[0])):
                 return False  # outside grid
-            if grid[ny][nx] == 1:
+            if grid[ni][nj] == 1:
                 return False  # wall
         return True
     return False
@@ -36,17 +36,17 @@ def advance(state, action, grid):
     Advances the state forward by the specified action amount if the path is valid. Returns the new state.
     """
     advance_num = advance_action[action]
-    dx, dy = advance_directions[state[2]]
+    di, dj = advance_directions[state[2]]
 
     for i in range(1, advance_num + 1):
-        x = state[0] + (i * dx)
-        y = state[1] + (i * dy)
-        if not valid_position(x, y, grid):
+        i = state[0] + (i * di)
+        j = state[1] + (i * dj)
+        if not valid_position(i, j, grid):
             return None
     
-    new_x = state[0] + (advance_num * dx)
-    new_y = state[1] + (advance_num * dy)
-    return (new_x, new_y, state[2])
+    new_i = state[0] + (advance_num * di)
+    new_j = state[1] + (advance_num * dj)
+    return (new_i, new_j, state[2])
 
 def turn(state, action):
     """
@@ -70,20 +70,21 @@ def BFS(grid, start_state, goal_state):
     Performs a breadth-first search on the grid to find a path from the start position and orientation to the goal position.
     Returns a list of actions to reach the goal, or None if no path is found.
     """
-    start_x, start_y, start_o = start_state
+    # Initialize queue(file, First In First Out), parents dictionnary and visited set
+    start_i, start_j, start_o = start_state
     queue = [start_state]
-    parents = {(start_x, start_y, start_o): None}
+    parents = {(start_i, start_j, start_o): None}
     visited = set()
-    visited.add((start_x, start_y, start_o))
+    visited.add((start_i, start_j, start_o))
 
-    while queue:
+    while queue: # While queue is not empty
         current_state = queue.pop(0)
 
         # Check if we reached the goal
         if current_state[:2] == goal_state:
-            path = [] # Reconstruct path
+            path = [] # Path to return
             last_state = current_state
-            while parents[last_state] is not None:
+            while parents[last_state] is not None: # Build the path from parents dictionnary
                 last_state, last_action = parents[last_state]
                 path.append(last_action)
             return path[::-1]  # Return reversed path
@@ -93,12 +94,9 @@ def BFS(grid, start_state, goal_state):
             new_state = perform_action(current_state, action, grid)
             # If the new state is valid and not visited, add it to the queue
             if new_state and (new_state[0], new_state[1], new_state[2]) not in visited:
-                visited.add((new_state[0], new_state[1], new_state[2]))
-                parents[new_state] = (current_state, action)
+                visited.add((new_state[0], new_state[1], new_state[2])) # Add the state to the visited
+                parents[new_state] = (current_state, action) # Add the state to parents
                 queue.append(new_state)
-    
-    #print(parents)
-    #print(visited)
 
     return None  # No path found
 
@@ -111,20 +109,20 @@ def visualize_path(grid, start_state, goal_state, path):
     visual_grid[visual_grid == '0'] = '.'  # Free space
     visual_grid[visual_grid == '1'] = '#'  # Wall
 
-    x, y, o = start_state
-    visual_grid[y][x] = 'S'  # Start
+    i, j, o = start_state
+    visual_grid[i][j] = 'S'  # Start
 
     for action in path:
-        new_state = perform_action((x, y, o), action, grid)
+        new_state = perform_action((i, j, o), action, grid)
         if new_state:
-            x, y, o = new_state
-            visual_grid[y][x] = '*'  # Path
+            i, j, o = new_state
+            visual_grid[i][j] = '*'  # Path
 
-    gx, gy = goal_state
-    visual_grid[gy][gx] = 'G'  # Goal
+    gi, gj = goal_state
+    visual_grid[gi][gj] = 'G'  # Goal
 
-    x, y, o = start_state
-    visual_grid[y][x] = 'S'  # Start
+    i, j, o = start_state
+    visual_grid[i][j] = 'S'  # Start
 
     for row in visual_grid:
         print(" ".join(row))
