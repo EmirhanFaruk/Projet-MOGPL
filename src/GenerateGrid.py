@@ -1,9 +1,12 @@
 import numpy as np
 from random import randint
 
-def is_valid_wall_position(grid, x, y):
+def is_valid_wall_position(grid, i, j):
+    """
+    Returns true if (i, j) location is 
+    """
     rows, cols = grid.shape
-    if x >= cols - 1 or x < 0 or y >= rows - 1 or y < 0:
+    if j >= cols - 1 or j < 0 or i >= rows - 1 or i < 0:
         return False
     """
     if np.any(grid[y:y+2, x:x+2] == 1):
@@ -13,20 +16,20 @@ def is_valid_wall_position(grid, x, y):
 
 
 wall_collision_directions = [
-    (0, -1),  # North
+    (-1, 0),  # North
     (0, 0),   # Center
     (-1, -1),   # North-West
-    (-1, 0)   # West
+    (0, -1)   # West
 ]
 
 
-def valid_position(x, y, grid):
+def valid_position(i, j, grid):
     """
     Check if the coordinates are valid(not in a wall and inside the grid).
     """
     if grid is not None:
-        if 0 <= x < len(grid[0]) and 0 <= y < len(grid):
-            in_a_wall = any(grid[y + dy][x + dx] == 1 for dx, dy in wall_collision_directions)
+        if 0 <= j < len(grid[0]) and 0 <= i < len(grid):
+            in_a_wall = any(grid[i + di][j + dj] == 1 for di, dj in wall_collision_directions)
             return not in_a_wall
     return False
 
@@ -38,20 +41,20 @@ def get_start_goal_positions(M, N, grid, min_distance=0):
     if min_distance == 0:
         min_distance = max(M, N) // 4
     
-    start_x = randint(1, N - 1)
-    start_y = randint(1, M - 1)
-    while (not valid_position(start_x, start_y, grid)):
-        start_x = randint(1, N - 1)
-        start_y = randint(1, M - 1)
+    start_i = randint(1, M - 1)
+    start_j = randint(1, N - 1)
+    while (not valid_position(start_i, start_j, grid)):
+        start_i = randint(1, M - 1)
+        start_j = randint(1, N - 1)
     start_o = randint(0, 3)
 
-    goal_x = randint(1, N - 1)
-    goal_y = randint(1, M - 1)
-    while abs(goal_y - start_y) < min_distance or (not valid_position(goal_x, goal_y, grid)):
-        goal_x = randint(1, N - 1)
-        goal_y = randint(1, M - 1)
+    goal_i = randint(1, M - 1)
+    goal_j = randint(1, N - 1)
+    while abs(goal_i - start_i) < min_distance or (not valid_position(goal_i, goal_j, grid)):
+        goal_i = randint(1, M - 1)
+        goal_j = randint(1, N - 1)
 
-    return (start_x, start_y, start_o), (goal_x, goal_y)
+    return (start_i, start_j, start_o), (goal_i, goal_j)
 
 def generate_grid(M=10, N=10, wall_num=10):
     """
@@ -62,13 +65,13 @@ def generate_grid(M=10, N=10, wall_num=10):
     
     for _ in range(wall_num):
         wall_pos = np.random.randint(0, M * N - 1)
-        x = wall_pos % N
-        y = wall_pos // N
-        while not is_valid_wall_position(grid, x, y):
+        i = wall_pos // N
+        j = wall_pos % N
+        while not is_valid_wall_position(grid, i, j):
             wall_pos = np.random.randint(0, M * N - 1)
-            x = wall_pos % N
-            y = wall_pos // N
-        grid[y][x] = 1
+            i = wall_pos // N
+            j = wall_pos % N
+        grid[i][j] = 1
         
     
     start_pos, goal_pos = get_start_goal_positions(M, N, grid)

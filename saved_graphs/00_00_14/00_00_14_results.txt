@@ -1,0 +1,50 @@
+5 D D a2 G a2
+7 D a1 G a2 a2 D a2
+2 G a2
+12 D a1 D D a3 a2 G a2 G a3 D a1
+2 G a2
+4 G a2 D a3
+7 D D a2 D a3 G a2
+8 a3 a3 G a1 G a3 a3 a2
+6 a3 a3 D a3 a3 a2
+6 D a2 G a2 D a3
+7 G a3 a3 a3 G a3 a3
+9 a3 G a3 a3 D a3 a3 G a2
+5 a3 a3 a1 D a2
+10 D a3 a3 a3 a3 D a1 a3 D a3
+8 G a2 D a2 G a3 G a3
+5 a3 G a3 a3 a2
+10 D D a3 D a2 a2 G a3 a3 a1
+9 D D a3 a3 a1 G a3 a2 a3
+6 G a3 D a3 G a2
+11 D D a3 a3 a2 a3 D a3 a3 a3 a3
+21 a3 a3 a3 a3 a3 a3 a3 a2 D a3 a3 a3 a3 a3 a2 a2 D a3 a3 a3 a3
+8 G a3 D a3 a3 a3 a3 a3
+10 a3 a3 a1 a3 G a3 a3 a3 a3 a1
+16 a3 a3 G a3 a3 a3 a1 a3 G a3 a3 a3 a3 a3 a3 a3
+27 D D a3 a3 a3 a3 a3 a3 D a3 a3 a3 a3 a3 a3 a3 a1 D a3 a3 a3 a3 a3 a3 a3 a3 a3
+14 a3 a3 a1 D a3 a3 a3 a3 a3 G a3 a3 a3 a3
+9 a3 a3 a3 a3 a3 G a3 a3 a2
+8 a3 a3 a3 a3 a3 a1 D a3
+17 a3 a3 G a3 a3 a3 a3 a3 a3 a3 a1 G a3 a3 D a3 a3
+9 D a3 a3 a3 a1 D a3 a2 a2
+18 D D a3 a3 a3 a3 a3 a3 a3 a2 D a3 a3 a3 a3 a3 a3 a1
+8 a3 a3 a3 a3 a2 D a3 a1
+17 D D a3 a3 D a1 a3 D a3 a3 a3 a3 a3 a3 a3 a3 a2
+15 G a3 a3 a3 G a3 a3 a3 a3 a3 D a3 a3 a3 a2
+32 D a3 a3 D a3 a3 a3 G a3 a3 a3 a2 D a3 a3 a2 a3 D a3 a3 a3 a3 a3 a3 a3 a3 a3 D a1 G a3 a3
+13 D D a3 a2 G a3 G a3 a3 a3 a3 a3 a3
+21 D D a3 a3 a3 a3 a3 a3 a3 G a3 a3 a3 a3 a3 G a3 a3 a3 G a1
+32 a3 a3 a3 a3 D a3 a3 a3 a3 a3 a3 a1 G a3 a3 a3 a2 a3 a2 a3 G a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3
+26 D a3 a3 a3 a3 D a3 a3 a3 G a3 a3 a3 G a3 a3 a3 a3 a3 a3 a3 a3 G a2 D a2
+11 D D a3 a3 a3 a3 a3 a3 G a3 a2
+25 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 G a3 D a1 a3 D a3 a3 a3 a3 a3 D a1
+25 a3 a3 a3 a3 a3 a3 G a3 a3 a2 D a3 a3 a2 D a3 a3 a3 a3 a3 a3 a3 a3 a3 a3
+24 D D a3 a3 a3 a3 a3 a3 a3 a3 G a3 a3 a3 a3 a3 a3 a3 a3 G a3 a3 a3 a2
+32 a3 a3 a3 a3 a3 G a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 G a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 G a1
+20 G a3 a3 a3 a3 a3 a3 a3 G a3 a3 a3 a3 a3 D a3 a3 a3 a3 a3
+20 G a3 a3 a3 D a3 a3 D a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 D a1
+7 a3 a3 a3 a3 G a3 a1
+24 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a2 G a3 a3 a3 a3 D a3 G a2 a3 G a3 a1
+32 G a3 a3 a3 a2 G a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 G a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3
+8 a3 G a3 a3 a3 a3 D a2

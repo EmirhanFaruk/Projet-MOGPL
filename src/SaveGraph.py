@@ -43,8 +43,8 @@ def save_graph_list_to_file(instances, filename):
     
     with open(filename, 'a') as f:
         for grid, start_pos, goal_pos in instances:
-            grs = graph_to_string(grid, start_pos, goal_pos)
-            f.write(grs)
+            grs = graph_to_string(grid, start_pos, goal_pos) # Get graph as a string
+            f.write(grs) # Write the graph in the file
         f.write("0 0\n")  # End of file indicator
         
 
