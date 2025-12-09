@@ -1,0 +1,18 @@
+contourpy @ file:///C:/miniconda3/conda-bld/contourpy_1763643940930/work
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+fonttools @ file:///C:/miniconda3/conda-bld/fonttools_1759754888085/work
+kiwisolver @ file:///C:/miniconda3/conda-bld/kiwisolver_1764159382796/work
+matplotlib==3.10.7
+mkl-service==2.5.2
+mkl_fft @ file:///C:/miniconda3/conda-bld/mkl_fft_1761592920106/work
+mkl_random @ file:///C:/miniconda3/conda-bld/mkl_random_1761593150425/work
+numpy @ file:///C:/miniconda3/conda-bld/numpy_and_numpy_base_1763980698946/work/dist/numpy-2.3.5-cp311-cp311-win_amd64.whl#sha256=e3ba89fff46662b034bf265cf2c543d64ef34c25de2a336da7724a746cb8dc4e
+packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049096285/work
+pillow @ file:///C:/b/abs_b50vowcrzo/croot/pillow_1738010273782/work
+pyparsing @ file:///C:/miniconda3/conda-bld/pyparsing_1763973807786/work
+PyQt6==6.9.1
+PyQt6_sip @ file:///C:/miniconda3/conda-bld/pyqt-split_1757511038427/work/pyqt_sip
+python-dateutil @ file:///C:/b/abs_3au_koqnbs/croot/python-dateutil_1716495777160/work
+sip @ file:///C:/b/abs_f6ow8vlbb7/croot/sip_1756224172742/work
+six @ file:///C:/b/abs_149wuyuo1o/croot/six_1744271521515/work
+tornado @ file:///C:/b/abs_7dzpc171lf/croot/tornado_1748956950306/work

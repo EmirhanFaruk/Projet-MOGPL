@@ -85,7 +85,7 @@ def ask_save(grid, start_pos, goal_pos, result):
     os.makedirs(output_dir, exist_ok=True)
 
     graph_list = [(grid, start_pos, goal_pos)]
-    results = [result]  # result is already [length, action1, action2, ...]
+    results = [result]  # result is [length, action1, action2, ...]
 
     save_graph_and_results(graph_list=graph_list, results=results, output_dir=output_dir, file_time=file_time)
 
@@ -227,6 +227,9 @@ def test_test_file():
         path = result
         print("Path found:", path[1:])
         print("Number of explored nodes:", path[0])
+        visualize_path(grid, start_pos, goal_pos, path[1:])
+    else:
+        print("No path found.")
 
 
 
